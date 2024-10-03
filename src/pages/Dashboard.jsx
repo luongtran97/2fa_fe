@@ -35,6 +35,15 @@ function Dashboard() {
     navigate('/login')
   }
 
+  const handelSuccess2FA = (updatedUser) => { 
+    // update lại thông tin trong state component
+    setUser(updatedUser)
+    // update lại thông tin trong localstorage
+    localStorage.setItem('userInfo',JSON.stringify(updatedUser))
+    // đóng modal
+    setOpenSetup2FA(false)
+   }
+
   if (!user) {
     return (
       <Box sx={{
@@ -66,6 +75,7 @@ function Dashboard() {
         isOpen={openSetup2FA}
         toggleOpen={setOpenSetup2FA}
         user={user}
+        handelSuccess2FA={handelSuccess2FA}
       />
 
       {/* Modal yêu cầu xác thực 2FA */}

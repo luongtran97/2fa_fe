@@ -30,3 +30,7 @@ export const get2FA_QRCodeAPI = async (userId) => {
   return res.data
 }
 
+export const set2FA_QRCodeAPI = async (userId,otpToken) => {
+  const res = await authorizedAxiosInstance.post(`${API_ROOT}/v1/users/${userId}/setup_2fa_qr_code`,{otpToken})
+  return res.data
+}
