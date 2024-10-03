@@ -65,6 +65,7 @@ function Dashboard() {
       <Setup2FA
         isOpen={openSetup2FA}
         toggleOpen={setOpenSetup2FA}
+        user={user}
       />
 
       {/* Modal yêu cầu xác thực 2FA */}
@@ -128,8 +129,8 @@ function Dashboard() {
       <Box sx={{ textAlign: 'right' }}>
         Author:&nbsp;
         <Typography variant="span" sx={{ fontWeight: 'bold', '&:hover': { color: '#fdba26' } }}>
-          <a style={{ color: 'inherit', textDecoration: 'none' }} href='https://youtube.com/@trungquandev' target='_blank' rel='noreferrer'>
-            TrungQuanDev - Một Lập Trình Viên
+          <a style={{ color: 'inherit', textDecoration: 'none' }} href='https://github.com/luongtran97' target='_blank' rel='noreferrer'>
+            luongtrandev
           </a>
         </Typography>
       </Box>
